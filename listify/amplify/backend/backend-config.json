@@ -1,9 +1,0 @@
-{
-	"auth": {
-		"listifyd82af88d": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	}
-}

@@ -3,19 +3,7 @@ Personal note tracker List + notify = listify
 Following guide: https://dev.to/dabit3/how-to-build-production-ready-vue-authentication-23mk
 
 ##Notes
-Gearjxc
-move everything to a new app
-
-Budget tracker
-Jira - event planner
-Email/newsletter
-Lifestyle tracker
-Portfolio generator?
-Calculator/common conversions
-
-https://www.taniarascia.com/getting-started-with-vue/
-git config --global credential.helper store
-
+`npm run serve`
 
 ##Amplify
 some next steps:
