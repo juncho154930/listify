@@ -1,6 +1,5 @@
 <template>
-  <h1>Welcome, {{user.attributes.email}}</h1>
-  user: {{user.username}}
+  <h1>Welcome, {{user.username}}</h1>
 </template>
 
 <script>

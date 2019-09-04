@@ -1,29 +1,16 @@
 # listify
+Personal note tracker List + notify = listify
+Following guide: https://dev.to/dabit3/how-to-build-production-ready-vue-authentication-23mk
 
-## Project setup
-```
-yarn install
-```
+##Notes
+`npm run serve`
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+##Amplify
+some next steps:
+"amplify status" will show you what you've added already and if it's locally configured or deployed
+"amplify <category> add" will allow you to add features like user login or a backend API
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Pro tip:
+Try "amplify add api" to create a backend API and then "amplify publish" to deploy everything
