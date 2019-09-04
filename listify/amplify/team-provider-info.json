@@ -1,0 +1,19 @@
+{
+    "vue": {
+        "awscloudformation": {
+            "AuthRoleName": "listify-vue-20190904115349-authRole",
+            "UnauthRoleArn": "arn:aws:iam::482696872750:role/listify-vue-20190904115349-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::482696872750:role/listify-vue-20190904115349-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "listify-vue-20190904115349-deployment",
+            "UnauthRoleName": "listify-vue-20190904115349-unauthRole",
+            "StackName": "listify-vue-20190904115349",
+            "StackId": "arn:aws:cloudformation:us-east-1:482696872750:stack/listify-vue-20190904115349/918e9380-cf34-11e9-9d51-0a583df6bf38"
+        },
+        "categories": {
+            "auth": {
+                "listifyd82af88d": {}
+            }
+        }
+    }
+}
