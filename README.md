@@ -1,9 +1,14 @@
 # listify
+vue nodejs/nestjs mongodb 
 Personal note tracker List + notify = listify
 Following guide: https://dev.to/dabit3/how-to-build-production-ready-vue-authentication-23mk
 
 ##Notes
 `npm run serve`
+
+##App Features
+Notes
+Budget tracker
 
 ##Amplify
 some next steps:

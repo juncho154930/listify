@@ -10,6 +10,9 @@
       <router-link tag="p" to="/protected">
         <a>Protected</a>
       </router-link>
+      <router-link tag="p" to="/create">
+        <a>Create</a>
+      </router-link>
       <router-link tag="p" to="/auth" v-if="!signedIn">
         <a>Sign Up / Sign In</a>
       </router-link>
@@ -70,6 +73,10 @@ export default {
 }
 .sign-out {
   width: 160px;
+  margin: 0 auto;
+}
+.form-wrapper {
+  width: 500px;
   margin: 0 auto;
 }
 </style>
