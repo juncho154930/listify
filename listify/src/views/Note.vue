@@ -1,40 +1,20 @@
 <template>
-    <div class="container-fluid">
-      <div class="text-center">
-        <h1>Nest Note List App Tutorial</h1>
-       <p> Built with Nest.js, Vue.js and MongoDB</p>
-       <div v-if="notes.length === 0">
-            <h2> No note found at the moment </h2>
+    <div class="note">
+      <div>
+        <h1>Note List App - Stack: Nest.js, Vue.js and MongoDB</h1>
+        <div v-if="notes.length === 0">
+          <h2> No note found at the moment </h2>
         </div>
       </div>
-
-        <div class="">
-            <table class="table table-bordered">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Content</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="note in notes" :key="note._id">
-                  <td>{{ note.title }}</td>
-                  <td>{{ note.content }}</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group" style="margin-bottom: 20px;">
-                                  <router-link :to="{name: 'Edit', params: {id: note._id}}" class="btn btn-sm btn-outline-secondary">Edit Note </router-link>
-                                  <button class="btn btn-sm btn-outline-secondary" v-on:click="deleteNote(note._id)">Delete Note</button>
-                                </div>
-                              </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <div class="note__content" v-for="note in notes" :key="note._id">
+        <div>{{ note.title }}</div>
+        <div>{{ note.content }}</div>
+        <router-link :to="{name: 'Edit', params: {id: note._id}}" >Edit Note </router-link>
+        <button v-on:click="deleteNote(note._id)">Delete Note</button>
+      </div>
     </div>
 </template>
+
 <script>
 import { server } from "../helper";
 import axios from "axios";
@@ -64,3 +44,25 @@ export default {
   }
 };
 </script>
+
+<style scoped lang="scss">
+.note{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align:center;
+  &__content{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    border:1px solid #000;
+    font-size:18px;
+    font-weight: 600;
+    a{
+      padding: 10px;
+      background-color: #ccc;
+    }
+  }
+}
+
+</style>

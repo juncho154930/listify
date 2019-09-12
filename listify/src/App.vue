@@ -1,21 +1,15 @@
 <template>
   <div id='app'>
-    <div  class='nav'>
-      <router-link tag="p" to="/">
-        <a>Home</a>
-      </router-link>
-      <router-link tag="p" to="/profile">
-        <a>Profile</a>
-      </router-link>
-      <router-link tag="p" to="/protected">
-        <a>Protected</a>
-      </router-link>
-      <router-link tag="p" to="/create">
-        <a>Create</a>
-      </router-link>
+    <div class='nav'>
+      <router-link to="/">Home</router-link>
+      <router-link to="/profile">Profile</router-link>
+      <router-link to="/protected">Protected</router-link>
+      <router-link to="/note">Note</router-link>
+      <router-link to="/create">Create</router-link>
       <router-link tag="p" to="/auth" v-if="!signedIn">
         <a>Sign Up / Sign In</a>
       </router-link>
+<!--  <router-link tag="p" to="/example">Example</router-link> -->
     </div>
     <router-view></router-view>
     <div class='sign-out'>
@@ -56,27 +50,15 @@ export default {
 }
 </script>
 
-<style>
-.nav {
+<style lang="scss">
+// @import "@/styles/global.scss";
+.nav{
   display: flex;
-}
-.nav p {
-  padding: 0px 30px 0px 0px;
-  font-size: 18px;
-  color: #000;
-}
-.nav p:hover {
-  opacity: .7;
-}
-.nav p a {
-  text-decoration: none;
-}
-.sign-out {
-  width: 160px;
-  margin: 0 auto;
-}
-.form-wrapper {
-  width: 500px;
-  margin: 0 auto;
+  justify-content: center;
+  a{
+    padding: 10px;
+    margin: 10px;
+    background-color: #ccc;    
+  }
 }
 </style>

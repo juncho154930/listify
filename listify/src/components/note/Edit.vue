@@ -50,7 +50,7 @@ export default {
           noteData
         )
         .then(data => {
-          router.push({ name: "home" });
+          router.push({ name: "Note" });
         });
     },
     getNote() {

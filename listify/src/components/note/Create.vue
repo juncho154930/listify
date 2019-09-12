@@ -39,7 +39,7 @@ export default {
     },
     __submitToServer(data) {
       axios.post(`${server.baseURL}/note/create`, data).then(data => {
-        router.push({ name: "home" });
+        router.push({ name: "Note" });
       });
     }
   }
