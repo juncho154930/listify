@@ -1,9 +1,9 @@
 <template>
-  <div class="hello">
+  <div class="home container__lg">
     <h1>{{ test }}</h1>
     Todo:
     <ul>
-      <li>Figure out sass loader so I can have global sass variables</li>
+      <li>Create a budget tracker</li>
     </ul>
   </div>
 </template>
@@ -12,7 +12,6 @@
 export default {
   name: 'home',
   props: {
-    msg: "test"
   },
   data(){
     return{
@@ -22,20 +21,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>

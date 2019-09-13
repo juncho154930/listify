@@ -1,18 +1,18 @@
 <template>
-   <div>
-        <div class="col-md-12 form-wrapper">
+   <div class="container__lg">
+        <div>
           <h2> Create Note </h2>
-          <form id="create-post-form" @submit.prevent="createNote">
-               <div class="form-group col-md-12">
+          <form @submit.prevent="createNote">
+               <div>
                 <label for="title"> Title </label>
-                <input type="text" id="title" v-model="title" name="title" class="form-control" placeholder="Enter Title">
+                <input type="text" v-model="title" name="title" placeholder="Enter Title">
                </div>
-            <div class="form-group col-md-12">
+            <div>
                 <label for="content"> Content </label>
-                <input type="text" id="content" v-model="content" name="content" class="form-control" placeholder="Enter Content">
+                <textarea type="text" v-model="content" name="content" placeholder="Enter Content"></textarea>
             </div>
-            <div class="form-group col-md-4 pull-right">
-                <button class="btn btn-success" type="submit"> Create Note </button>
+            <div>
+                <button type="submit"> Create Note </button>
             </div>           
           </form>
         </div>

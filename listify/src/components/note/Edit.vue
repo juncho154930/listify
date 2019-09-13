@@ -1,23 +1,23 @@
 <template>
-   <div>
-        <h4 class="text-center mt-20">
+   <div class="container__lg">
+        <h4>
          <small>
-         <button class="btn btn-success" v-on:click="navigate()"> View All Notes </button>
+         <button v-on:click="navigate()"> Go Back </button>
          </small>
         </h4>
-        <div class="col-md-12 form-wrapper">
+        <div>
           <h2> Edit Note </h2>
-          <form id="create-post-form" @submit.prevent="editNote">
-               <div class="form-group col-md-12">
+          <form @submit.prevent="editNote">
+               <div>
                 <label for="title"> Title </label>
-                <input type="text" id="title" v-model="note.title" name="title" class="form-control" placeholder="Enter title">
+                <input type="text" v-model="note.title" name="title" placeholder="Enter title">
                </div>
-                <div class="form-group col-md-12">
+                <div>
                     <label for="content"> Content </label>
-                    <input type="text" id="content" v-model="note.content" name="content" class="form-control" placeholder="Enter Content">
+                    <textarea type="text" v-model="note.content" name="content" placeholder="Enter Content"></textarea>
                 </div>
-                <div class="form-group col-md-4 pull-right">
-                    <button class="btn btn-success" type="submit"> Edit Note </button>
+                <div>
+                    <button type="submit"> Edit Note </button>
                 </div>           
               </form>
         </div>
@@ -31,8 +31,16 @@ export default {
   data() {
     return {
       id: 0,
-      note: {}
+      note: {},
+      confirmMsg: true
     };
+  },
+  beforeRouteLeave (to, from, next) {
+    if(this.confirmMsg){
+      if(confirm('You are about to discard your changes')) next();
+    } else{
+      next();
+    }
   },
   created() {
     this.id = this.$route.params.id;
@@ -44,6 +52,7 @@ export default {
         title: this.note.title,
         content: this.note.content
       };
+      this.confirmMsg = false;
       axios
         .put(
           `${server.baseURL}/note/update?noteID=${this.id}`,
@@ -52,6 +61,7 @@ export default {
         .then(data => {
           router.push({ name: "Note" });
         });
+
     },
     getNote() {
       axios

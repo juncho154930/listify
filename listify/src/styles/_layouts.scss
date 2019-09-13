@@ -1,0 +1,9 @@
+.container{
+	&__lg{
+		width: 100%;
+		@include desktop {
+			max-width: 1024px;
+			margin: 0 auto;
+	  }
+	}
+}

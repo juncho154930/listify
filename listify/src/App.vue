@@ -6,15 +6,11 @@
       <router-link to="/protected">Protected</router-link>
       <router-link to="/note">Note</router-link>
       <router-link to="/create">Create</router-link>
-      <router-link tag="p" to="/auth" v-if="!signedIn">
-        <a>Sign Up / Sign In</a>
-      </router-link>
+      <router-link to="/auth" v-if="!signedIn">Sign Up / Sign In</router-link>
+      <amplify-sign-out v-if="signedIn"></amplify-sign-out>
 <!--  <router-link tag="p" to="/example">Example</router-link> -->
     </div>
     <router-view></router-view>
-    <div class='sign-out'>
-      <amplify-sign-out v-if="signedIn"></amplify-sign-out>
-    </div>
   </div>
 </template>
 
@@ -56,9 +52,9 @@ export default {
   display: flex;
   justify-content: center;
   a{
-    padding: 10px;
+    @extend .button;
+    padding: 20px;
     margin: 10px;
-    background-color: #ccc;    
   }
 }
 </style>
