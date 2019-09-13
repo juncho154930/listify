@@ -55,7 +55,7 @@ export default {
     display: flex;
     justify-content: space-evenly;
     margin: 10px;
-    border:1px solid #000;
+    border:1px solid $text-black;
     font-size:18px;
     font-weight: 600;
     a{

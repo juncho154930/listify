@@ -1,12 +1,12 @@
 import Router from 'vue-router'
 import Vue from 'vue'
 
-import Home from '@/components/Home'
-import Profile from '@/components/Profile'
-import Auth from '@/components/Auth'
-import Protected from '@/components/Protected'
-
+import Home from '@/views/Home'
+import Profile from '@/views/Profile'
+import Auth from '@/views/Auth'
+import Protected from '@/views/Protected'
 import NoteComponent from '@/views/Note';
+
 import EditComponent from '@/components/note/Edit';
 import CreateComponent from '@/components/note/Create';
 
