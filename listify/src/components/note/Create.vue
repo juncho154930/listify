@@ -26,11 +26,20 @@ export default {
   data() {
     return {
       title: "",
-      content: ""
+      content: "",
+      confirmMsg: true
     };
+  },
+  beforeRouteLeave (to, from, next) {
+    if(this.confirmMsg){
+      if(confirm('You are about to discard your changes')) next();
+    } else{
+      next();
+    }
   },
   methods: {
     createNote() {
+      this.confirmMsg = false;
       let noteData = {
         title: this.title,
         content: this.content

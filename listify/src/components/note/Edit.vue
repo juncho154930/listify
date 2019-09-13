@@ -48,11 +48,11 @@ export default {
   },
   methods: {
     editNote() {
+      this.confirmMsg = false;
       let noteData = {
         title: this.note.title,
         content: this.note.content
       };
-      this.confirmMsg = false;
       axios
         .put(
           `${server.baseURL}/note/update?noteID=${this.id}`,
