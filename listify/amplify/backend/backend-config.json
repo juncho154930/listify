@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"listifyc883dd21": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
